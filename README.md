@@ -3,7 +3,7 @@
 Simple platform for merchants selling construction materials to find market for their goods. Vendors/merchants meet demand for their products while customers enjoy sales discounts and flexible payment plans.
 ________
 
-# Features:
+## Features:
 
 1. Simple UI and Engaging UX
 
