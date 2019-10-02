@@ -35,7 +35,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="16dp"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/login" />
+                android:src="" />
 
             <!-- Sign in and Sign up buttons -->
             <LinearLayout
@@ -71,12 +71,12 @@
             <!---This fragment will have both login and register on the same activity-->
             <!-- COMPLETE: Change this ViewPager's height to wrap content instead of being hardcoded. -->
             <!-- Add Class that will manage ViewPager -->
-            <com.madonasyombua.growwithgoogleteamproject.ui.fragment.ViewPagerManagement
-                android:id="@+id/container"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginTop="16dp">
-            </com.madonasyombua.growwithgoogleteamproject.ui.fragment.ViewPagerManagement>
+<!--            <com.madonasy.growwithgoogleteamproject.ui.fragment.ViewPagerManagement-->
+<!--                android:id="@+id/container"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="250dp"-->
+<!--                android:layout_marginTop="16dp">-->
+<!--            </com.madonasyombua.growwithgoogleteamproject.ui.fragment.ViewPagerManagement>-->
 
 
             <!-- Margin top is a bad idea here we should root container for ConstraintLayout -->
