@@ -2,5 +2,7 @@
     <string name="app_name">Jenga</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
-    <string name="emailInput">Email or Phone Number</string>
+    <string name="emailInput">Email Address</string>
+    <string name="passwordInput">Password</string>
+    <string name="loginBtn">Login</string>
 </resources>
