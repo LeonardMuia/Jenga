@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="12dp"
     tools:context=".auth">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="10">
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp">
 
         <LinearLayout
+            android:id="@+id/page_info"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentTop="true"
             android:orientation="horizontal">
 
             <TextView
@@ -30,7 +29,7 @@
                 android:layout_weight="2"
                 android:layout_gravity="center_vertical"
                 android:text="@string/regMessage"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:fontFamily="@font/normal"
                 android:textAllCaps="true"/>
 
@@ -50,8 +49,10 @@
                 android:id="@+id/nav"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
+                android:layout_below="@+id/page_info"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -63,7 +64,7 @@
                     android:checked="true"
                     android:fontFamily="@font/normal"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="16sp"/>
+                    android:textSize="14sp"/>
 
                 <RadioButton
                     android:id="@+id/customerRegister"
@@ -74,18 +75,18 @@
                     android:layout_marginStart="40dp"
                     android:textColor="@color/colorPrimaryDark"
                     android:fontFamily="@font/normal"
-                    android:textSize="16sp"/>
+                    android:textSize="14sp"/>
 
             </RadioGroup>
 
         <RelativeLayout
             android:id="@+id/form"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="8"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nav"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
             <TextView
@@ -99,20 +100,20 @@
                 android:id="@+id/username_reg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:padding="10dp"
-                android:focusedByDefault="true"
+                android:focusable="true"
                 android:layout_gravity="center"
                 android:maxHeight="50dp"
                 android:layout_below="@+id/username"
-                android:background="@color/inputBackground" />
+                android:background="@color/textLight" />
 
             <TextView
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/username_reg"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/normal"
                 android:text="@string/email"/>
 
@@ -123,18 +124,18 @@
                 android:inputType="textEmailAddress"
                 android:layout_gravity="center"
                 android:focusableInTouchMode="true"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:maxHeight="50dp"
                 android:padding="10dp"
                 android:layout_below="@+id/email"
-                android:background="@color/inputBackground" />
+                android:background="@color/textLight" />
 
             <TextView
                 android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/email_reg"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/normal"
                 android:text="@string/phone"/>
 
@@ -144,19 +145,19 @@
                 android:layout_height="wrap_content"
                 android:inputType="phone"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:focusableInTouchMode="true"
                 android:maxHeight="50dp"
                 android:padding="10dp"
                 android:layout_below="@+id/phone"
-                android:background="@color/inputBackground" />
+                android:background="@color/textLight" />
 
             <TextView
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/phone_reg"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/normal"
                 android:text="@string/passwordInput"/>
 
@@ -166,12 +167,34 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:maxHeight="50dp"
                 android:focusableInTouchMode="true"
                 android:padding="10dp"
                 android:layout_below="@+id/password"
-                android:background="@color/inputBackground" />
+                android:background="@color/textLight" />
+
+            <TextView
+                android:id="@+id/password_conf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_reg"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/normal"
+                android:text="@string/confirm_password"/>
+
+            <EditText
+                android:id="@+id/password_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:maxHeight="50dp"
+                android:focusableInTouchMode="true"
+                android:padding="10dp"
+                android:layout_below="@+id/password_conf"
+                android:background="@color/textLight" />
 
             <CheckBox
                 android:id="@+id/terms"
@@ -181,7 +204,7 @@
                 android:layout_marginBottom="10dp"
                 android:text="@string/terms"
                 android:textColor="@color/colorPrimaryDark"
-                android:layout_below="@id/password_reg"/>
+                android:layout_below="@id/password_confirm"/>
 
             <Button
                 android:id ="@+id/registerBtn"
@@ -189,6 +212,7 @@
                 android:text="@string/createAcc"
                 android:textColor="@color/textWhite"
                 android:textSize="18sp"
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/button"
@@ -199,9 +223,10 @@
         <LinearLayout
             android:id="@+id/alreadyReg"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/form"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
             android:orientation="horizontal">
 
             <TextView
@@ -227,6 +252,6 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -2,11 +2,14 @@ package com.example.android.jengaapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,6 +27,8 @@ public class auth extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
 
+    @BindView(R.id.customerRegister)
+    TextView toRegister;
     @BindView(R.id.inputEmail)
     EditText userEmail;
     @BindView(R.id.passwordInput)
@@ -40,6 +45,15 @@ public class auth extends AppCompatActivity implements View.OnClickListener {
         // Initializing Auth
         mAuth = FirebaseAuth.getInstance();
         loginButton.setOnClickListener(this);
+
+        // Intent to Register Activity
+        toRegister.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent registerView = new Intent(getApplicationContext(), Register.class);
+                startActivity(registerView);
+            }
+        });
     }
 
     /*
@@ -117,7 +131,7 @@ public class auth extends AppCompatActivity implements View.OnClickListener {
      *  Else show login activity
      */
 
-        public void updateUI(FirebaseUser user){
+        private void updateUI(FirebaseUser user){
             //hideProgressDialog();
             if(user != null){
                setContentView(R.layout.main);
@@ -131,16 +145,4 @@ public class auth extends AppCompatActivity implements View.OnClickListener {
              signIn(userEmail.getText().toString(),userPassword.getText().toString());
          }
     }
-
-
-    /*
-     *  If a user is not registered
-     *  Redirect them to the registration form
-     */
-
-    @OnClick(R.id.customerRegister)
-    public void registerView(){
-        setContentView(R.layout.register);
-    }
-
 }

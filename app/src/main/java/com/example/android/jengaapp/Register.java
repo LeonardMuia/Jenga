@@ -1,5 +1,6 @@
 package com.example.android.jengaapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -17,12 +19,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import org.w3c.dom.Text;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class Register extends auth implements View.OnClickListener {
+public class Register extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.loginText)
     TextView already_registered;
@@ -48,6 +48,14 @@ public class Register extends auth implements View.OnClickListener {
         ButterKnife.bind(this);
         create_account.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
+
+        already_registered.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToLogin = new Intent(getApplicationContext(),auth.class);
+                startActivity(goToLogin);
+            }
+        });
     }
 
     @Override
@@ -56,14 +64,13 @@ public class Register extends auth implements View.OnClickListener {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
 
-
     }
 
     /*
      *  Registration
      * @Param username, email, phone, password
      */
-    public void createAccount(String email, String password){
+    public void createAccount(String username, String email, String phone, String password){
         if (!validateForm()){
             return;
         }
@@ -116,15 +123,34 @@ public class Register extends auth implements View.OnClickListener {
             phone_registration.setError(null);
         }
 
-        String password = userPassword.getText().toString();
+        String password = password_registration.getText().toString();
         if(TextUtils.isEmpty(password)){
-            userPassword.setError("Required");
+            password_registration.setError("Required");
             valid = false;
         } else {
-            userPassword.setError(null);
+            password_registration.setError(null);
         }
         return valid;
     }
 
+    /*
+     *  Update User Interface
+     *  If user is logged in, redirect to main activity
+     *  Else show login activity
+     */
 
+    private void updateUI(FirebaseUser user){
+        //hideProgressDialog();
+        if(user != null){
+            setContentView(R.layout.main);
+        }
+    }
+
+    @Override
+    public void onClick(View v){
+        int i = v.getId();
+        if(i == R.id.registerBtn){
+            createAccount(username_registration.getText().toString(), phone_registration.getText().toString(),email_registration.getText().toString(),password_registration.getText().toString());
+        }
+    }
 }

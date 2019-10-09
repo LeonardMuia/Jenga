@@ -10,9 +10,11 @@
     <string name="customerReg">Customer</string>
     <string name="vendorReg">Vendor</string>
     <string name="username">Username</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="email">Email Address</string>
     <string name="phone">Phone Number</string>
     <string name="registeredUser">Already have an account?</string>
     <string name="regMessage">Create a new account</string>
-    <string name="terms">I accept terms and conditions.</string>
+    <string name="terms">I accept the terms and conditions of use</string>
+    <string name="password_forgotten">Forgot password?</string>
 </resources>
