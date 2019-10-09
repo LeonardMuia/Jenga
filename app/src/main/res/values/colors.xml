@@ -7,4 +7,5 @@
     <color name="backgroundLight">#f7f7f7</color>
     <color name="textLight">#ddd</color>
     <color name="textWhite">#fff</color>
+    <color name="inputBackground">#f2f2f2</color>
 </resources>

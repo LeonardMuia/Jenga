@@ -1,8 +1,18 @@
 <resources>
     <string name="app_name">Jenga</string>
-    <string name="login">Login</string>
+    <string name="login"><ul>Login</ul></string>
     <string name="register">Register</string>
-    <string name="emailInput">Email Address</string>
+    <string name="createAcc">Create Account</string>
+    <string name="emailInput">Email or Phone Number</string>
     <string name="passwordInput">Password</string>
     <string name="loginBtn">Login</string>
+    <string name="socialLogin">Social Login</string>
+    <string name="customerReg">Customer</string>
+    <string name="vendorReg">Vendor</string>
+    <string name="username">Username</string>
+    <string name="email">Email Address</string>
+    <string name="phone">Phone Number</string>
+    <string name="registeredUser">Already have an account?</string>
+    <string name="regMessage">Create a new account</string>
+    <string name="terms">I accept terms and conditions.</string>
 </resources>

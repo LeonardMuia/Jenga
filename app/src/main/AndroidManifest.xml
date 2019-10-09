@@ -6,7 +6,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label= "@string/app_name"
         android:allowBackup="true"
-        android:roundIcon="@drawable/icon2"
+        android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".Intro" android:label="@string/app_name">
