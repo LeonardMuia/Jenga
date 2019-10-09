@@ -8,9 +8,6 @@
     android:layout_margin="12dp"
     tools:context=".auth">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -85,10 +82,10 @@
             android:id="@+id/form"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="9"
-            android:layout_marginTop="20dp"
+            android:layout_weight="8"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -176,7 +173,7 @@
                 android:id="@+id/terms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_margin="10dp"
                 android:text="@string/terms"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_below="@id/password_reg"/>
@@ -196,9 +193,11 @@
         </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/alreadyReg"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <TextView
@@ -213,6 +212,7 @@
                 android:text="@string/registeredUser"/>
 
             <TextView
+                android:id="@+id/loginText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -224,7 +224,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
