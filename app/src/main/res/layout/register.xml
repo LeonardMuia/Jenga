@@ -61,8 +61,8 @@
                     android:text="@string/customerReg"
                     android:padding="8dp"
                     android:checked="true"
-                    android:textColor="@color/colorAccent"
-                    android:fontFamily="@font/bold"
+                    android:fontFamily="@font/normal"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="16sp"/>
 
                 <RadioButton
@@ -72,7 +72,7 @@
                     android:text="@string/register"
                     android:padding="8dp"
                     android:layout_marginStart="40dp"
-                    android:textColor="@color/textLight"
+                    android:textColor="@color/colorPrimaryDark"
                     android:fontFamily="@font/normal"
                     android:textSize="16sp"/>
 

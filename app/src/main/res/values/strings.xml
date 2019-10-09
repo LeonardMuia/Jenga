@@ -3,7 +3,7 @@
     <string name="login"><ul>Login</ul></string>
     <string name="register">Register</string>
     <string name="createAcc">Create Account</string>
-    <string name="emailInput">Email or Phone Number</string>
+    <string name="emailInput">Email Address</string>
     <string name="passwordInput">Password</string>
     <string name="loginBtn">Login</string>
     <string name="socialLogin">Social Login</string>
