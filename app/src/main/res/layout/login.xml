@@ -108,7 +108,7 @@
                 android:textSize="18sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/button"
                 android:layout_below="@+id/passwordInput"/>
         </RelativeLayout>
 

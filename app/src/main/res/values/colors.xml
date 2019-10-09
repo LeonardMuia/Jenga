@@ -8,4 +8,5 @@
     <color name="textLight">#ddd</color>
     <color name="textWhite">#fff</color>
     <color name="inputBackground">#f2f2f2</color>
+    <color name="button">#192841</color>
 </resources>
