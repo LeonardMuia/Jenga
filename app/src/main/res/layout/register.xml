@@ -221,7 +221,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/login"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:fontFamily="@font/bold"
                 android:textColor="@color/colorAccent"/>
 

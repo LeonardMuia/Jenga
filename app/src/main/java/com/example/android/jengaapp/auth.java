@@ -90,9 +90,6 @@ public class auth extends AppCompatActivity {
 
         private void updateUI(FirebaseUser user){
             //hideProgressDialog();
-            if(user != null){
-                user
-            }
         }
 
 
