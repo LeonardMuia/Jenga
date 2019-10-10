@@ -2,11 +2,13 @@
     <string name="app_name">Jenga</string>
     <string name="login"><ul>Login</ul></string>
     <string name="register">Register</string>
+    <string name="welcome_customer">Customer Account.</string>
+    <string name="customer_instruction">Purchase construction materials and pay in installments. Create an account to get started.</string>
     <string name="createAcc">Create Account</string>
     <string name="emailInput">Email Address</string>
     <string name="passwordInput">Password</string>
     <string name="loginBtn">Login</string>
-    <string name="socialLogin">Social Login</string>
+    <string name="socialLogin">Login Using</string>
     <string name="customerReg">Customer</string>
     <string name="vendorReg">Vendor</string>
     <string name="username">Username</string>
@@ -14,7 +16,13 @@
     <string name="email">Email Address</string>
     <string name="phone">Phone Number</string>
     <string name="registeredUser">Already have an account?</string>
-    <string name="regMessage">Create a new account</string>
-    <string name="terms">I accept the terms and conditions of use.</string>
+    <string name="regMessage">Create an account</string>
+    <string name="terms">By clicking "Create Account" you are agreeing to our Terms of Service. View our Privacy Policy to see how we keep your information safe.</string>
     <string name="password_forgotten">Forgot password?</string>
+    <string name="registration_page">Create an Account</string>
+    <string name="register_instructions">You can either create an account as a customer or a vendor. Select your preferred account to proceed.</string>
+    <string name="register_as_customer">Register as a Customer</string>
+    <string name="register_as_vendor">Register as a Vendor</string>
+    <string name="customer_account">A customer account enables you to buy construction materials from different vendors. You can browse products from different vendors. This account enables you to purchase products in installments or on credit.</string>
+    <string name="vendor_account">A vendor account is shop that enables you sell your products through Jenga. As a vendor, you can list your products and prices. This platform will help you market your products to potential customers.</string>
 </resources>

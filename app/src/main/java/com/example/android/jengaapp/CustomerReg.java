@@ -6,7 +6,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,12 +21,10 @@ import com.google.firebase.auth.FirebaseUser;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class Register extends AppCompatActivity implements View.OnClickListener {
+public class CustomerReg extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.loginText)
     TextView already_registered;
-    @BindView(R.id.customerLogin)
-    RadioButton customer_login;
     @BindView(R.id.username_reg)
     EditText username_registration;
     @BindView(R.id.email_reg)
@@ -52,7 +49,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         already_registered.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToLogin = new Intent(getApplicationContext(),auth.class);
+                Intent goToLogin = new Intent(getApplicationContext(), Login.class);
                 startActivity(goToLogin);
             }
         });
@@ -70,7 +67,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
      *  Registration
      * @Param username, email, phone, password
      */
-    public void createAccount(String username, String email, String phone, String password){
+    public void createAccount(String email,String password){
         if (!validateForm()){
             return;
         }
@@ -84,7 +81,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
-                            Toast.makeText(Register.this, "Authentication failed.",
+                            Toast.makeText(CustomerReg.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
@@ -150,7 +147,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v){
         int i = v.getId();
         if(i == R.id.registerBtn){
-            createAccount(username_registration.getText().toString(), phone_registration.getText().toString(),email_registration.getText().toString(),password_registration.getText().toString());
+            createAccount(email_registration.getText().toString(),password_registration.getText().toString());
         }
     }
 }

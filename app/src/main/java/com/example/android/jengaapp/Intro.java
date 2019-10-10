@@ -15,7 +15,7 @@ public class Intro extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent loginIntent = new Intent(Intro.this, auth.class);
+                Intent loginIntent = new Intent(Intro.this, Login.class);
                 startActivity(loginIntent);
                 finish();
             }

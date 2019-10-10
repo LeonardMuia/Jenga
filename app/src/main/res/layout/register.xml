@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".auth">
+    tools:context=".Login">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -44,46 +44,34 @@
         </LinearLayout>
 
 
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/page_info"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="24sp"
+            android:fontFamily="@font/normal"
+            android:textColor="@color/colorAccent"
+            android:text="@string/welcome_customer"/>
 
-            <RadioGroup
-                android:id="@+id/nav"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_below="@+id/page_info"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/customerLogin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/customerReg"
-                    android:padding="8dp"
-                    android:checked="true"
-                    android:fontFamily="@font/normal"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp"/>
-
-                <RadioButton
-                    android:id="@+id/customerRegister"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/vendorReg"
-                    android:padding="8dp"
-                    android:layout_marginStart="40dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:fontFamily="@font/normal"
-                    android:textSize="14sp"/>
-
-            </RadioGroup>
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcome_text"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/normal"
+            android:text="@string/customer_instruction"/>
 
         <RelativeLayout
             android:id="@+id/form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/nav"
+            android:layout_below="@+id/instructions"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
@@ -102,6 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:padding="10dp"
+                android:maxLines="1"
                 android:focusable="true"
                 android:layout_gravity="center"
                 android:maxHeight="50dp"
@@ -196,15 +185,16 @@
                 android:layout_below="@+id/password_conf"
                 android:background="@color/textLight" />
 
-            <CheckBox
+            <TextView
                 android:id="@+id/terms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_below="@id/password_confirm"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bold"
                 android:text="@string/terms"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_below="@id/password_confirm"/>
+                android:textSize="12sp"
+                android:textAlignment="center"/>
 
             <Button
                 android:id ="@+id/registerBtn"
@@ -246,7 +236,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/login"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:fontFamily="@font/bold"
                 android:textColor="@color/colorAccent"/>
 

@@ -3,7 +3,7 @@
     package="com.example.android.jengaapp">
 
     <application
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label= "@string/app_name"
         android:allowBackup="true"
         android:roundIcon="@drawable/icon"
@@ -15,9 +15,13 @@
                 <action android:name="android.intent.action.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".auth">
+        <activity android:name=".Login">
         </activity>
-        <activity android:name=".Register">
+        <activity android:name=".Registration">
+        </activity>
+        <activity android:name=".CustomerReg">
+        </activity>
+        <activity android:name=".VendorReg">
         </activity>
         <activity android:name=".Main">
         </activity>

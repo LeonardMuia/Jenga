@@ -21,9 +21,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class auth extends AppCompatActivity implements View.OnClickListener {
+public class Login extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
 
@@ -46,12 +45,12 @@ public class auth extends AppCompatActivity implements View.OnClickListener {
         mAuth = FirebaseAuth.getInstance();
         loginButton.setOnClickListener(this);
 
-        // Intent to Register Activity
+        // Intent to CustomerReg Activity
         toRegister.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent registerView = new Intent(getApplicationContext(), Register.class);
-                startActivity(registerView);
+                Intent registrationView = new Intent(getApplicationContext(), Registration.class);
+                startActivity(registrationView);
             }
         });
     }
@@ -86,7 +85,7 @@ public class auth extends AppCompatActivity implements View.OnClickListener {
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
-                            Toast.makeText(auth.this,"Authentication failed",
+                            Toast.makeText(Login.this,"Authentication failed",
                                     Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
