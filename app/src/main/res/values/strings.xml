@@ -2,8 +2,6 @@
     <string name="app_name">Jenga</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
-    <string name="welcome_customer">Customer Account.</string>
-    <string name="customer_instruction">Purchase construction materials and pay in installments. Create an account to get started.</string>
     <string name="createAcc">Create Account</string>
     <string name="emailInput">Email Address</string>
     <string name="passwordInput">Password</string>
@@ -12,17 +10,41 @@
     <string name="customerReg">Customer</string>
     <string name="vendorReg">Vendor</string>
     <string name="username">Username</string>
+    <string name="vendor_name">Company Name</string>
+    <string name="company_email">Business Email</string>
+    <string name="shop_name">Shop Name</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="email">Email Address</string>
     <string name="phone">Phone Number</string>
     <string name="registeredUser">Already have an account?</string>
     <string name="regMessage">Create an account</string>
-    <string name="terms">By clicking <u>Create Account</u> you are agreeing to our Terms of Service. View our Privacy Policy to see how we keep your information safe.</string>
+    <string name="terms">By clicking Create Account you are agreeing to our <u>Terms of Service</u>. View our <u>Privacy Policy</u> to see how we keep your information safe.</string>
     <string name="password_forgotten"><u>Forgot password?</u></string>
+
     <string name="registration_page">Create an Account</string>
     <string name="register_instructions">You can either create an account as a customer or a vendor. Select your preferred account to proceed.</string>
     <string name="register_as_customer">Register as a Customer</string>
     <string name="register_as_vendor">Register as a Vendor</string>
-    <string name="customer_account">A customer account enables you to buy construction materials from different vendors. You can browse products from different vendors. This account enables you to purchase products in installments or on credit.</string>
-    <string name="vendor_account">A vendor account provides you with a shop to sell your products. As a vendor, you can list your products and prices. This platform will help you market your products to potential customers.</string>
+    <string name="customer_account">A customer account enables you to buy construction materials from different vendors. Select for a wide range of products and check reviews on products. Then, you can purchase products in installments or on credit.</string>
+    <string name="vendor_account">A vendor account provides you with a shop to sell your products. As a vendor, you can list your products. This platform will help you market and sell your products to potential customers.</string>
+    <string name="welcome_customer">Customer Registration.</string>
+    <string name="customer_instruction">Purchase construction materials and pay in installments. Create an account to get started.</string>
+    <string name="welcome_vendor">Vendor Registration.</string>
+    <string name="vendor_instruction">List and sell your products through Jenga. Boost your sales, earn more revenue. Create an account to get started.</string>
+
+    <string name="title_activity_customer_main">CustomerMain</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
 </resources>

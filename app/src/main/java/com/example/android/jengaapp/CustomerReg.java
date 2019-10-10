@@ -41,7 +41,7 @@ public class CustomerReg extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.register);
+        setContentView(R.layout.customer_registration);
         ButterKnife.bind(this);
         create_account.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
