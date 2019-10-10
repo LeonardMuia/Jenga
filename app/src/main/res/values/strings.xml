@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Jenga</string>
-    <string name="login"><ul>Login</ul></string>
+    <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="welcome_customer">Customer Account.</string>
     <string name="customer_instruction">Purchase construction materials and pay in installments. Create an account to get started.</string>
@@ -17,8 +17,8 @@
     <string name="phone">Phone Number</string>
     <string name="registeredUser">Already have an account?</string>
     <string name="regMessage">Create an account</string>
-    <string name="terms">By clicking "Create Account" you are agreeing to our Terms of Service. View our Privacy Policy to see how we keep your information safe.</string>
-    <string name="password_forgotten">Forgot password?</string>
+    <string name="terms">By clicking <u>Create Account</u> you are agreeing to our Terms of Service. View our Privacy Policy to see how we keep your information safe.</string>
+    <string name="password_forgotten"><u>Forgot password?</u></string>
     <string name="registration_page">Create an Account</string>
     <string name="register_instructions">You can either create an account as a customer or a vendor. Select your preferred account to proceed.</string>
     <string name="register_as_customer">Register as a Customer</string>
