@@ -13,9 +13,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
 
 
@@ -25,6 +28,7 @@ import butterknife.ButterKnife;
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     @BindView(R.id.customerRegister)
     TextView toRegister;
@@ -84,18 +88,23 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                         if (task.isSuccessful()){
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
-                        } else {
-                            Toast.makeText(Login.this,"Authentication failed",
-                                    Toast.LENGTH_SHORT).show();
-                            updateUI(null);
                         }
-
-                       // if(!task.isSuccessful()){
-                       //    mStatusTextView.setText(R.string.auth_failed);
-                       // }
-                       // hideProgressDialog();
                     }
-                });
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                if (e instanceof FirebaseAuthInvalidUserException){
+                    userEmail.setError("Account does not exist");
+                    Toast.makeText(Login.this,"Account does not exist. Create a new account or contact support.",
+                            Toast.LENGTH_LONG).show();
+                } else if (e instanceof FirebaseAuthInvalidCredentialsException){
+                    userPassword.setError("Wrong Password");
+                } else {
+                    Toast.makeText(Login.this,"Authentication Failed",
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
     }
 
@@ -133,7 +142,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         private void updateUI(FirebaseUser user){
             //hideProgressDialog();
             if(user != null){
-               setContentView(R.layout.main);
+               setContentView(R.layout.products);
             }
         }
 

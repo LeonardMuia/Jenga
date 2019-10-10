@@ -16,7 +16,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,6 +34,8 @@ public class CustomerReg extends AppCompatActivity implements View.OnClickListen
     EditText password_registration;
     @BindView(R.id.registerBtn)
     Button create_account;
+    @BindView(R.id.password_confirm)
+    EditText password_confirmation;
 
     private FirebaseAuth mAuth;
 
@@ -55,18 +56,11 @@ public class CustomerReg extends AppCompatActivity implements View.OnClickListen
         });
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
-
-    }
-
     /*
      *  Registration
      * @Param username, email, phone, password
      */
+
     public void createAccount(String email,String password){
         if (!validateForm()){
             return;
@@ -78,12 +72,11 @@ public class CustomerReg extends AppCompatActivity implements View.OnClickListen
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+                            Intent goToMain = new Intent(getApplicationContext(), Main.class);
+                            startActivity(goToMain);
                         } else {
                             Toast.makeText(CustomerReg.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            updateUI(null);
                         }
 
                         // hideProgressDialog();
@@ -127,20 +120,20 @@ public class CustomerReg extends AppCompatActivity implements View.OnClickListen
         } else {
             password_registration.setError(null);
         }
-        return valid;
-    }
 
-    /*
-     *  Update User Interface
-     *  If user is logged in, redirect to main activity
-     *  Else show login activity
-     */
-
-    private void updateUI(FirebaseUser user){
-        //hideProgressDialog();
-        if(user != null){
-            setContentView(R.layout.main);
+        String confirm_pass = password_confirmation.getText().toString();
+        if(TextUtils.isEmpty(confirm_pass)){
+            password_confirmation.setError("Required");
+        } else {
+            password_confirmation.setError(null);
         }
+
+        if(!password.equals(confirm_pass)){
+            password_confirmation.setError("Passwords don\'t match");
+        } else {
+            password_confirmation.setError(null);
+        }
+        return valid;
     }
 
     @Override

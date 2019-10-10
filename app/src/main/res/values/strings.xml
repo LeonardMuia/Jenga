@@ -21,6 +21,8 @@
     <string name="terms">By clicking Create Account you are agreeing to our <u>Terms of Service</u>. View our <u>Privacy Policy</u> to see how we keep your information safe.</string>
     <string name="password_forgotten"><u>Forgot password?</u></string>
 
+
+    <string name="logout">Logout</string>
     <string name="registration_page">Create an Account</string>
     <string name="register_instructions">You can either create an account as a customer or a vendor. Select your preferred account to proceed.</string>
     <string name="register_as_customer">Register as a Customer</string>
