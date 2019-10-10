@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "78653424137",
+    "firebase_url": "https://jenga-55d59.firebaseio.com",
+    "project_id": "jenga-55d59",
+    "storage_bucket": "jenga-55d59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78653424137:android:cd547382f994dade276ed8",
+        "android_client_info": {
+          "package_name": "com.example.android.jengaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78653424137-kfhjr0tl48llrj5becm1pp11o80v5km8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.jengaapp",
+            "certificate_hash": "b3e4f57714d62e88cdea8ac53a707e56d56987ee"
+          }
+        },
+        {
+          "client_id": "78653424137-4nhattni5gs2oov6vck7h09jvoqgvop1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAazaAZVoaLmH70ZCR3O6o9FkmHYdJVsU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78653424137-4nhattni5gs2oov6vck7h09jvoqgvop1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
