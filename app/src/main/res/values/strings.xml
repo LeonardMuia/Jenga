@@ -24,5 +24,5 @@
     <string name="register_as_customer">Register as a Customer</string>
     <string name="register_as_vendor">Register as a Vendor</string>
     <string name="customer_account">A customer account enables you to buy construction materials from different vendors. You can browse products from different vendors. This account enables you to purchase products in installments or on credit.</string>
-    <string name="vendor_account">A vendor account is shop that enables you sell your products through Jenga. As a vendor, you can list your products and prices. This platform will help you market your products to potential customers.</string>
+    <string name="vendor_account">A vendor account provides you with a shop to sell your products. As a vendor, you can list your products and prices. This platform will help you market your products to potential customers.</string>
 </resources>
